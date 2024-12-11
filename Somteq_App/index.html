@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="View/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Main Info ================== -->
+            <header>
+                <h2 style="text-transform: uppercase; font-size: 86px;">Bienvenido a Somteq</h2><br>
+                <h1><p>Monitoriza y controla tus equipos y piezas de manera eficiente.</p></h1>
+            </header>
+              <!-- Panel de Resumen -->
+              <section id="dashboard">
+                <h2>Resumen General</h2>
+                <div class="stats-container">
+                  <div class="stat">
+                    <h3>Total de Equipos</h3>
+                    <p id="totalEquipments">0</p>
+                  </div>
+                  <div class="stat">
+                    <h3>Total de Piezas</h3>
+                    <p id="totalPieces">0</p>
+                  </div>
+                  <div class="stat">
+                    <h3>En Mantenimiento</h3>
+                    <p id="inMaintenance">0</p>
+                  </div>
+                  <div class="stat">
+                    <h3>Dadas de Baja</h3>
+                    <p id="lowInventory">0</p>
+                  </div>
+                </div>
+              </section>
+              <!-- Gráficos y Visualizaciones -->
+              <section id="visualizations">
+                <h2>Gráficos y Análisis</h2>
+                <div id="chartContainer">
+                  <!-- Contenedor para gráficos -->
+                </div>
+              </section>
+              <!-- Acceso Rápido -->
+              <section id="quick-access">
+                <h2>Acceso Rápido</h2>
+                <div class="quick-links">
+                  <button onclick="navigateTo('inventory')">Ver Inventario</button>
+                  <button onclick="navigateTo('addItem')">Agregar Nuevo Elemento</button>
+                  <button onclick="navigateTo('generateReport')">Generar Informe</button>
+                  <button onclick="navigateTo('calendar')">Ver Calendario</button>
+                </div>
+              </section>
+              <!-- Tareas y Notificaciones -->
+              <section id="tasks">
+                <h2>Tareas Pendientes</h2>
+                <ul id="taskList">
+                  <!-- Lista dinámica de tareas -->
+                </ul>
+              </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

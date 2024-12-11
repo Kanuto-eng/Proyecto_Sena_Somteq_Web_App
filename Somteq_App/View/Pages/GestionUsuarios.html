@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/View/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">12</div>
+                        <div class="cardName">Numero de usuarios</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">8</div>
+                        <div class="cardName">Numero de clientes</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2</div>
+                        <div class="cardName">Usuarios Activos</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2</div>
+                        <div class="cardName">Clientes Activos</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="people-circle-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión de Clientes -->
+             <section id="clientes">
+                <h2>Gestión de Clientes</h2> <br>
+                <div class="form-container">
+                    <form id="client-form">
+                        <input type="text" id="clientName" placeholder="Nombre del Cliente (Clínica/Hospital/Doctor)" required>
+                        <textarea id="clientDescription" placeholder="Descripción"></textarea>
+                        <button type="button" onclick="addClient()">Agregar Cliente</button>
+                    </form> <br>
+                </div>
+                <div id="client-list">
+                    <h3>Lista de Clientes</h3> <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clientTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- Gestión de Usuarios -->
+             <section id="usuarios">
+                <h2>Gestión de Usuarios</h2> <br> 
+                <div class="form-container">
+                    <form id="user-form">
+                        <input type="text" id="firstName" placeholder="Primer Nombre" required>
+                        <input type="text" id="secondName" placeholder="Segundo Nombre">
+                        <input type="text" id="lastName" placeholder="Primer Apellido" required>
+                        <input type="text" id="secondLastName" placeholder="Segundo Apellido">
+                        <input type="text" id="clinic" placeholder="Clínica a la que pertenece">
+                        <input type="text" id="role" placeholder="Tipo de profesional (Ej. Doctor)">
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                        <select id="userRole">
+                            <option value="admin">Administrador</option> <br>
+                            <option value="maintenance">Mantenimiento</option> <br>
+                            <option value="health">Personal de Salud</option> <br>
+                        </select>
+                        <button type="button" onclick="addUser()">Agregar Usuario</button>
+                    </form> <br>
+                </div>
+                <div id="user-list">
+                    <h3>Lista de Usuarios</h3> <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre Completo</th>
+                                <th>Clínica</th>
+                                <th>Rol</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+    <script src="/View/js/GestionUsuario.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

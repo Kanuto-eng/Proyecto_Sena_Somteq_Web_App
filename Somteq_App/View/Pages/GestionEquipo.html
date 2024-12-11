@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/View/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Cantidad de piezas del equipo</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Cantidad de piezas en mantenimiento</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Cantidad de piezas terminadas</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,140</div>
+                        <div class="cardName">Cantidad de piezas pendientes</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Registro de Equipos -->
+              <section id="registro-equipo">
+                <h2>Registrar Equipo</h2><BR>
+                    <div class="form-container">
+                        <form id="equipment-form">
+                            <input type="text" id="equipmentName" placeholder="Nombre del Equipo" required>
+                            <input type="text" id="serialNumber" placeholder="Número de Serie" required>
+                            <select id="equipmentStatus">
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
+                            </select>
+                            <input type="date" id="lastSterilizationDate" placeholder="Fecha Última Esterilización">
+                            <textarea id="equipmentDescription" placeholder="Descripción"></textarea>
+                            <input type="text" id="purchaseOrder" placeholder="Orden de Entrada">
+                            <button type="button" onclick="addEquipment()">Registrar Equipo</button>
+                        </form>
+                    </div>
+                    <div id="equipment-list">
+                        <h3>Lista de Equipos</h3><BR>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Número de Serie</th>
+                                        <th>Estado</th>
+                                        <th>Última Esterilización</th>
+                                        <th>Descripción</th>
+                                        <th>Orden de Entrada</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="equipmentTableBody"></tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <!-- Asignación de Equipos a Clínicas -->
+                     <section id="asignacion-equipo">
+                        <h2>Asignar Equipo a Clínica</h2>
+                        <div class="form-container">
+                            <form id="assign-form">
+                                <input type="text" id="clinicName" placeholder="Nombre de la Clínica" required>
+                                <input type="text" id="assignedEquipment" placeholder="Equipo a Asignar" required>
+                                <button type="button" onclick="assignEquipment()">Asignar Equipo</button><BR>
+                                </form>
+                            </div>
+                            <div id="assignment-list">
+                                <h3>Equipos Asignados</h3><BR>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Clínica</th>
+                                                <th>Equipo</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="assignmentTableBody"></tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <!-- Registro de Mantenimiento -->
+                             <section id="mantenimiento">
+                                <h2>Registrar Mantenimiento</h2><BR>
+                                    <div class="form-container">
+                                        <form id="maintenance-form">
+                                            <input type="text" id="maintenanceEquipment" placeholder="Equipo a Registrar Mantenimiento" required>
+                                            <textarea id="maintenanceDescription" placeholder="Descripción del Mantenimiento"></textarea>
+                                            <label for="maintenanceDate">Fecha:</label>
+                                            <input type="date" id="maintenanceDate">
+                                            <button type="button" onclick="addMaintenance()">Registrar Mantenimiento</button><BR>
+                                        </form>
+                                    </div>
+                                    <div id="maintenance-list">
+                                        <h3>Historial de Mantenimiento</h3><BR>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Equipo</th>
+                                                        <th>Descripción</th>
+                                                        <th>Fecha</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="maintenanceTableBody"></tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+    <script src="/View/js/main.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

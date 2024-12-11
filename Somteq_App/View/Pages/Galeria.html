@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/View/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504 Total de Piezas</div>
+                        <div class="cardName">Cantidad de Fotografias</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2</div>
+                        <div class="cardName">Cantidad de equipos</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="construct-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Cantidad de piezas terminadas</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="build-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">5</div>
+                        <div class="cardName">Cantidad de piezas de baja</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="gallery-container">
+                        <h1>Galería de Fotografías</h1><br>
+                        <div class="gallery">
+                                <!-- Formulario para cargar imágenes e información -->
+                                 <div class="upload-section">
+                                     <h2>Cargar Nueva Fotografía</h2><br>
+                                     <form id="upload-form">
+                                        <label for="team-name">Nombre del Equipo:</label>
+                                        <input type="text" id="team-name" name="team-name" required>
+  
+                                        <label for="piece-name">Nombre de la Pieza:</label>
+                                        <input type="text" id="piece-name" name="piece-name" required>
+  
+                                        <label for="piece-code">Código de la Pieza:</label>
+                                        <input type="text" id="piece-code" name="piece-code" required>
+  
+                                        <label for="clinic-name">Clínica:</label>
+                                        <input type="text" id="clinic-name" name="clinic-name" required>
+  
+                                        <label for="description">Descripción del Proceso:</label>
+                                        <textarea id="description" name="description" rows="4" required></textarea>
+  
+                                        <label for="image-upload">Seleccionar Imagen:</label>
+                                        <input type="file" id="image-upload" name="image-upload" accept="image/*" required>
+  
+                                        <button type="button" onclick="addImage()">Subir</button>
+                                    </form>
+                                </div>
+                                
+                                <!-- Galería de imágenes -->
+                                 <div class="gallery">
+                                    <h2>Imágenes Subidas</h2><br>
+                                    <div id="gallery-grid" class="images"></div>
+                                </div>
+                            </div><br>
+                                <!-- Modal para zoom -->
+                            <div id="zoom-modal" class="modal">
+                                <span class="close" onclick="closeZoom()">&times;</span>
+                                <img class="modal-content" id="zoomed-image">
+                            </div><br>
+
+                            <h2>Equipos</h2><br>
+                            <div class="images">
+                              <div class="image-container" onclick="zoomImage(this)">
+                                <img src="/View/img/equipos.jpg!w700wp" alt="Equipos"><br>
+                                <div class="image-details">
+                                  <p><strong>Equipo al que pertenece:</strong> Equipo 1</p>
+                                  <p><strong>Nombre de la pieza:</strong> Pieza A</p>
+                                  <p><strong>Código de la pieza:</strong> ABC123</p>
+                                  <p><strong>Clínica a la que pertenece:</strong> Clínica XYZ</p>
+                                  <p><strong>Descripción del proceso:</strong> Revisión general</p>
+                                </div> <br>
+                                <textarea placeholder="Añade un comentario"></textarea>
+                              </div>
+                              <div class="image-container" onclick="zoomImage(this)">
+                                <img src="/View/img/equipos1.jpg" alt="Equipo 2"><br>
+                                <div class="image-details">
+                                  <p><strong>Equipo al que pertenece:</strong> Equipo 2</p>
+                                  <p><strong>Nombre de la pieza:</strong> Pieza B</p>
+                                  <p><strong>Código de la pieza:</strong> DEF456</p>
+                                  <p><strong>Clínica a la que pertenece:</strong> Clínica ABC</p>
+                                  <p><strong>Descripción del proceso:</strong> Mantenimiento preventivo</p>
+                                </div> <br>
+                                <textarea placeholder="Añade un comentario"></textarea>
+                              </div>
+                            </div>
+                            
+                            <h2>Piezas</h2>
+                            <div class="images">
+                              <div class="image-container" onclick="zoomImage(this)">
+                                <img src="/View/img/pieza.jpg" alt="Piezas"><br>
+                                <div class="image-details">
+                                  <p><strong>Equipo al que pertenece:</strong> Equipo 3</p>
+                                  <p><strong>Nombre de la pieza:</strong> Pieza C</p>
+                                  <p><strong>Código de la pieza:</strong> GHI789</p>
+                                  <p><strong>Clínica a la que pertenece:</strong> Clínica DEF</p>
+                                  <p><strong>Descripción del proceso:</strong> Ajuste técnico</p>
+                                </div> <br>
+                                <textarea placeholder="Añade un comentario"></textarea>
+                              </div>
+                              <div class="image-container" onclick="zoomImage(this)">
+                                <img src="/View/img/pieza1.jpg" alt="Pieza 2"><br>
+                                <div class="image-details">
+                                  <p><strong>Equipo al que pertenece:</strong> Equipo 4</p>
+                                  <p><strong>Nombre de la pieza:</strong> Pieza D</p>
+                                  <p><strong>Código de la pieza:</strong> JKL012</p>
+                                  <p><strong>Clínica a la que pertenece:</strong> Clínica GHI</p>
+                                  <p><strong>Descripción del proceso:</strong> Reparación completa</p>
+                                </div> <br>
+                                <textarea placeholder="Añade un comentario"></textarea>
+                              </div>
+                            </div>
+                    
+                      <div id="zoom-modal" class="modal">
+                        <span class="close" onclick="closeZoom()">&times;</span>
+                        <img class="modal-content" id="zoomed-image">
+                      </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+    <script src="/View/js/Galeria.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

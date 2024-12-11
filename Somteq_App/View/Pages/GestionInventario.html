@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/View/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Cantidad de piezas del equipo</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Cantidad de piezas en mantenimiento</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Cantidad de piezas terminadas</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,140</div>
+                        <div class="cardName">Cantidad de piezas pendientes</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Gestión de Inventarios</h1>
+
+    <!-- Formulario para agregar equipos/piezas -->
+    <section id="inventory-form-section">
+      <h2>Registrar Equipo o Pieza</h2>
+      <form id="inventory-form">
+        <label for="itemType">Tipo de Elemento:</label>
+        <select id="itemType" required>
+          <option value="equipo">Equipo</option>
+          <option value="pieza">Pieza</option>
+        </select>
+
+        <label for="itemName">Nombre del Elemento:</label>
+        <input type="text" id="itemName" placeholder="Ejemplo: Bisturí, Pinza Mayo" required>
+
+        <label for="itemCode">Código:</label>
+        <input type="text" id="itemCode" placeholder="Ejemplo: ABC123" required>
+
+        <label for="itemQuantity">Cantidad:</label>
+        <input type="number" id="itemQuantity" placeholder="Cantidad disponible" required>
+
+        <label for="itemDescription">Descripción:</label>
+        <textarea id="itemDescription" rows="3" placeholder="Descripción del elemento" required></textarea>
+
+        <label for="clinicAssigned">Clínica Asignada:</label>
+        <input type="text" id="clinicAssigned" placeholder="Ejemplo: Clínica ABC">
+
+        <button type="button" onclick="addItem()">Agregar al Inventario</button>
+      </form>
+    </section>
+
+    <!-- Tabla de inventarios -->
+    <section id="inventory-table-section">
+      <h2>Inventario</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Cantidad</th>
+            <th>Descripción</th>
+            <th>Clínica</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryTableBody">
+          <!-- Las filas se agregarán dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="inventory-management">
+        <h2>Gestión de Inventarios</h2>
+      
+        <!-- Barra de búsqueda -->
+        <div id="search-bar">
+          <label for="searchInput">Buscar en el Inventario:</label>
+          <input type="text" id="searchInput" placeholder="Buscar por nombre, código o clínica" onkeyup="filterTable()">
+        </div>
+      
+        <!-- Botón para generar informe -->
+        <button id="generateReportBtn" onclick="generateInventoryReport()">Generar Informe PDF</button>
+      
+        <!-- Tabla de inventario -->
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Nombre</th>
+              <th>Código</th>
+              <th>Cantidad</th>
+              <th>Descripción</th>
+              <th>Clínica</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTableBody">
+            <!-- Las filas se agregarán dinámicamente -->
+          </tbody>
+        </table>
+      </section>
+
+
+
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+    <script src="/View/js/main.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

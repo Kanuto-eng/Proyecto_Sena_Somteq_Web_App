@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somteq Web App</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/View/css/style.css">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-skype"></ion-icon>
+                        </span>
+                        <span class="title">SOMTEQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Principal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInventario.html">
+                        <span class="icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Inventarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionInforme.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Informes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionEquipo.html">
+                        <span class="icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Equipos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionMantenimiento.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Mantenimientos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Galeria.html">
+                        <span class="icon">
+                            <ion-icon name="images-outline"></ion-icon>
+                        </span>
+                        <span class="title">Galeria</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/GestionUsuarios.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/View/pages/Ayuda.html">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cerrar Sesion</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="/View/img/administrador.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Cantidad de stock del equipo</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Cantidad de piezas salientes</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="build-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Cantidad de piezas terminadas</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,140</div>
+                        <div class="cardName">Cantidad de piezas pendientes</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="stopwatch-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <h1>Gestión de Mantenimiento de Instrumental Quirúrgico</h1>
+
+            <!-- Registro de mantenimiento -->
+            <section id="maintenance-management">
+              <h2>Registrar Mantenimiento</h2>
+              <form id="maintenance-form">
+                <label for="instrumentName">Nombre del Instrumento:</label>
+                <input type="text" id="instrumentName" placeholder="Ejemplo: Bisturí #10" required>
+        
+                <label for="maintenanceType">Tipo de Mantenimiento:</label>
+                <select id="maintenanceType" required>
+                  <option value="preventivo">Preventivo</option>
+                  <option value="correctivo">Correctivo</option>
+                </select>
+        
+                <label for="maintenanceDate">Fecha de Mantenimiento:</label>
+                <input type="date" id="maintenanceDate" required>
+        
+                <label for="maintenanceDescription">Descripción:</label>
+                <textarea id="maintenanceDescription" rows="4" placeholder="Descripción del mantenimiento realizado..." required></textarea>
+        
+                <button type="button" onclick="addMaintenance()">Agregar Mantenimiento</button>
+              </form>
+            </section>
+        
+            <!-- Registros de mantenimiento -->
+            <section id="maintenance-records">
+              <h2>Registros de Mantenimiento</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombre del Instrumento</th>
+                    <th>Tipo de Mantenimiento</th>
+                    <th>Fecha</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="maintenanceTableBody">
+                  <!-- Las filas se agregarán dinámicamente -->
+                </tbody>
+              </table>
+            </section>
+        
+            <!-- Remisiones -->
+            <section id="remission-management">
+              <h2>Registrar Remisiones</h2>
+              <form id="remission-form">
+                <label for="remissionInstrument">Instrumento a Remitir:</label>
+                <input type="text" id="remissionInstrument" placeholder="Ejemplo: Tijera Mayo" required>
+        
+                <label for="remissionReason">Razón de la Remisión:</label>
+                <textarea id="remissionReason" rows="3" placeholder="Motivo de la remisión..." required></textarea>
+        
+                <label for="remissionDate">Fecha de Remisión:</label>
+                <input type="date" id="remissionDate" required>
+        
+                <button type="button" onclick="addRemission()">Registrar Remisión</button>
+              </form><br>
+        
+              <h2>Lista de Remisiones</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Instrumento</th>
+                    <th>Razón</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="remissionTableBody">
+                  <!-- Las remisiones se agregarán dinámicamente -->
+                </tbody>
+              </table>
+            </section>
+
+            <section id="calendar-section">
+                <h2>Calendario de Fechas Importantes</h2>
+                <div id="calendar"></div>
+              </section>
+              
+          </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="View/js/main.js"></script>
+    <script src="/View/js/GestionMantenimiento.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
