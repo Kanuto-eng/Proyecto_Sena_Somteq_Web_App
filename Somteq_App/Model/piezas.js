@@ -1,7 +1,7 @@
 // models/piezas.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
-const Clinica = require('./Clinica'); // Asegúrate de tener el modelo `Clinica`
+const sequelize = require('../database/connection');
+const Clinica = require('./Clinica');
 
 const Piezas = sequelize.define('Piezas', {
   id: {
@@ -35,9 +35,9 @@ const Piezas = sequelize.define('Piezas', {
   },
 }, {
   tableName: 'piezas',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
-Piezas.belongsTo(Clinica, { foreignKey: 'clinicaId' }); // Relación con el modelo Clinica
+Piezas.belongsTo(Clinica, { foreignKey: 'clinicaId' });
 
 module.exports = Piezas;

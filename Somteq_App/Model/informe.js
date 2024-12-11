@@ -1,8 +1,8 @@
 // models/informe.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
-const Usuario = require('./Usuario'); // Ajusta según tu configuración
-const Equipo = require('./Equipo'); // Ajusta según tu configuración
+const sequelize = require('../database/connection');
+const Usuario = require('./Usuario');
+const Equipo = require('./Equipo');
 
 const Informe = sequelize.define('Informe', {
   id: {
@@ -15,7 +15,7 @@ const Informe = sequelize.define('Informe', {
     allowNull: false,
     references: {
       model: Usuario,
-      key: 'id', // Asegúrate de que el modelo `Usuario` tenga un campo `id`
+      key: 'id',
     },
   },
   fechaCreacion: {
@@ -39,12 +39,12 @@ const Informe = sequelize.define('Informe', {
     allowNull: true,
     references: {
       model: Equipo,
-      key: 'id', // Asegúrate de que el modelo `Equipo` tenga un campo `id`
+      key: 'id',
     },
   },
 }, {
   tableName: 'informes',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
 module.exports = Informe;

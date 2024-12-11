@@ -1,7 +1,6 @@
 // models/usuarios.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
-
+const sequelize = require('../database/connection');
 const Usuarios = sequelize.define('Usuarios', {
   id: {
     type: DataTypes.INTEGER,
@@ -19,7 +18,7 @@ const Usuarios = sequelize.define('Usuarios', {
   correo: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true, // Asegura que el correo sea único
+    unique: true,
   },
   contraseña: {
     type: DataTypes.STRING,
@@ -35,7 +34,7 @@ const Usuarios = sequelize.define('Usuarios', {
   },
 }, {
   tableName: 'usuarios',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
 // Hook para encriptar la contraseña antes de guardar el usuario

@@ -1,6 +1,6 @@
 // models/galeria.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
+const sequelize = require('../database/connection');
 
 const Galeria = sequelize.define('Galeria', {
   id: {
@@ -23,7 +23,7 @@ const Galeria = sequelize.define('Galeria', {
   },
 }, {
   tableName: 'galeria',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
 module.exports = Galeria;

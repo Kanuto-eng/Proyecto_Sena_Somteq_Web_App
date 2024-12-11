@@ -1,6 +1,6 @@
 // models/asignaciones.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
+const sequelize = require('../database/connection');
 
 const Asignaciones = sequelize.define('Asignaciones', {
   id: {
@@ -22,14 +22,14 @@ const Asignaciones = sequelize.define('Asignaciones', {
   },
 }, {
   tableName: 'asignaciones',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
-// Relación con el modelo `Equipos` (si existe)
+// Relación con el modelo `Equipos` 
 Asignaciones.associate = (models) => {
   Asignaciones.belongsTo(models.Equipos, {
     foreignKey: 'equipoId',
-    as: 'equipo', // Alias para la relación
+    as: 'equipo', 
   });
 };
 

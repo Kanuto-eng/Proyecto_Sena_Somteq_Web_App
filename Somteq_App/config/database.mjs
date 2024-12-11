@@ -20,7 +20,7 @@ const app = express();
 
 // Middlewares
 app.use(express.json()); // Para analizar solicitudes JSON
-app.use(cors()); // Habilitar CORS si es necesario
+app.use(cors()); 
 
 // Configurar la conexión con MySQL
 const db = mysql.createConnection({
@@ -45,10 +45,10 @@ app.use('/api/equipos', equiposRouter(db));
 app.use('/api/galeria', galeriaRouter(db));
 app.use('/api/historialMantenimiento', historialMantenimientoRouter(db));
 app.use('/api/clinica', clinicaRouter(db));
-app.use('/api/informes', informesRouter(db));  // Nueva ruta
-app.use('/api/mantenimiento', mantenimientoRouter(db));  // Nueva ruta
-app.use('/api/pieza', piezaRouter(db));  // Nueva ruta
-app.use('/api/usuarios', usuarioRouter(db));  // Nueva ruta
+app.use('/api/informes', informesRouter(db)); 
+app.use('/api/mantenimiento', mantenimientoRouter(db));
+app.use('/api/pieza', piezaRouter(db));
+app.use('/api/usuarios', usuarioRouter(db));
 
 // Ruta de inicio
 app.get('/', (req, res) => {

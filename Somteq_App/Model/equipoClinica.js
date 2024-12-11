@@ -1,7 +1,6 @@
 // models/equipoClinica.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
-
+const sequelize = require('../database/connection');
 const EquipoClinica = sequelize.define('EquipoClinica', {
   id: {
     type: DataTypes.INTEGER,
@@ -18,7 +17,7 @@ const EquipoClinica = sequelize.define('EquipoClinica', {
   },
 }, {
   tableName: 'equipo_clinica',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
 // Relación con modelos asociados

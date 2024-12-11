@@ -52,7 +52,7 @@ const EquipoClinicaController = {
 
   // Crear nueva relación entre equipo y clínica
   create: async (req, res) => {
-    const { equipoId, clinicaId } = req.body; // Asumiendo que estos son los datos necesarios
+    const { equipoId, clinicaId } = req.body;
 
     try {
       db.query(

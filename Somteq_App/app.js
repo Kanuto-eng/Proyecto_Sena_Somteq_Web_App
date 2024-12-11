@@ -19,15 +19,15 @@ const usuariosRouter = require('./Routes/usuariosRoutes');
 const app = express();
 
 // Middlewares
-app.use(express.json()); // Para analizar solicitudes JSON
-app.use(cors()); // Habilitar CORS si es necesario
+app.use(express.json()); // analizar solicitudes JSON
+app.use(cors());
 
 // Configurar la conexión con MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root', // Cambia por tu usuario de MySQL
-  password: '', // Cambia por tu contraseña de MySQL si tienes una
-  database: 'somteqdb', // Nombre de la base de datos que usarás
+  user: 'root', // usuario de MySQL
+  password: '', // contraseña de MySQL
+  database: 'somteqdb', // Nombre de la base de datos
 });
 
 db.connect((err) => {
@@ -68,6 +68,6 @@ const defineAssociations = require('./associations');
 defineAssociations();
 
 // Sincronizar las tablas con la base de datos
-sequelize.sync({ force: false }) // Cambia 'force' a 'true' si quieres que las tablas se eliminen y creen nuevamente
+sequelize.sync({ force: true }) // Cambia 'false' a 'true' para que las tablas se eliminen y creen nuevamente
   .then(() => console.log('Database synced'))
   .catch((err) => console.log('Error syncing database: ', err));

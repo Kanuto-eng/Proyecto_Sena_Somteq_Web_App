@@ -1,6 +1,6 @@
 // models/equipos.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
+const sequelize = require('../database/connection');
 
 const Equipos = sequelize.define('Equipos', {
   id: {
@@ -42,7 +42,7 @@ const Equipos = sequelize.define('Equipos', {
   },
 }, {
   tableName: 'equipos',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 });
 
 // Relación con modelos asociados

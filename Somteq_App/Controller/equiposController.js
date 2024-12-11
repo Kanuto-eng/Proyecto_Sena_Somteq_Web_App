@@ -42,7 +42,7 @@ const EquiposController = {
           if (result.length === 0) {
             return res.status(404).send('Equipo not found');
           }
-          res.json(result[0]); // Devuelve el equipo con su clínica y pieza
+          res.json(result[0]);
         }
       );
     } catch (err) {

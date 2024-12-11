@@ -1,8 +1,8 @@
 // models/historialMantenimiento.js
 
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); // Ajusta el path según tu configuración
-const Mantenimiento = require('./Mantenimiento.js'); // Ajusta según tu configuración de relaciones
+const sequelize = require('../database/connection');
+const Mantenimiento = require('./Mantenimiento.js'); 
 const HistorialMantenimiento = require('./HistorialMantenimiento.');
 
 const HistorialMantenimiento = sequelize.define('HistorialMantenimiento', {
@@ -18,7 +18,7 @@ const HistorialMantenimiento = sequelize.define('HistorialMantenimiento', {
     allowNull: false,
     references: {
       model: Mantenimiento,
-      key: 'id', // Asegúrate de que `Mantenimiento` tenga un campo `id`
+      key: 'id',
     },
   },
   fecha: {
@@ -31,7 +31,7 @@ const HistorialMantenimiento = sequelize.define('HistorialMantenimiento', {
   },
 }, {
   tableName: 'historial_mantenimiento',
-  timestamps: false, // Cambia a `true` si deseas incluir `createdAt` y `updatedAt`
+  timestamps: true,
 
 
 });

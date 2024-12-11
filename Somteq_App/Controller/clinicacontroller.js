@@ -40,7 +40,7 @@ const clinicaController = {
   // Actualizar clínica por ID
   updateById: async (req, res) => {
     const { id } = req.params;
-    const { nombre, direccion, telefono } = req.body; // Suponiendo que esos son los campos que quieres actualizar
+    const { nombre, direccion, telefono } = req.body;
 
     try {
       db.query(
@@ -65,7 +65,7 @@ const clinicaController = {
 
   // Crear nueva clínica
   create: async (req, res) => {
-    const { nombre, direccion, telefono } = req.body; // Asegúrate de que estos sean los datos necesarios
+    const { nombre, direccion, telefono } = req.body;
 
     try {
       db.query(
